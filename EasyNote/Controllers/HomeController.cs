@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace EasyNote.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         //login
