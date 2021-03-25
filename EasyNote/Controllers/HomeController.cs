@@ -8,6 +8,7 @@ namespace EasyNote.Controllers
 {
     public class HomeController : Controller
     {
+        //login
         public ActionResult Index()
         {
             return View();
