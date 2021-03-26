@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EasyNote.WiewModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -15,9 +16,20 @@ namespace EasyNote.Models
         public string Title { get; set; }
         public string Content { get; set; }
 
+        [Required]
         [ForeignKey("Author")]
         public string AuthorId { get; set; }
 
         public virtual ApplicationUser  Author { get; set; }
+
+        public NoteVM ToViewModel()
+        {
+            return new NoteVM()
+            {
+                Id = Id,
+                Title = Title,
+                Content = Content
+            };
+        }
     }
 }
