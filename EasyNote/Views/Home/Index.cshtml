@@ -1,17 +1,14 @@
-﻿@{ 
-    ViewBag.Title = "Home Page";
-    
-  }
+﻿@{ ViewBag.Title = "Home Page"; }
 
 @if (!User.Identity.IsAuthenticated)
 {
-   <div class="jumbotron" style="margin-top: 3rem">
-      <h1>Easy Note</h1>
-      <p class="lead">Easy Note is an application where you can keep and view your notes. <br />Please sign in to start using our app!</p>
-       <p><a href="@Url.Action("Login", "Account")" class="btn btn-primary btn-lg">Sign In &raquo;</a></p>
-   </div> }
-            else
-            {
+<div class="jumbotron" style="margin-top: 3rem">
+    <h1>Easy Note</h1>
+    <p class="lead">Easy Note is an application where you can keep and view your notes. <br />Please sign in to start using our app!</p>
+    <p><a href="@Url.Action("Login", "Account")" class="btn btn-primary btn-lg">Sign In &raquo;</a></p>
+</div> }
+else
+{
 @Html.Partial("_Notes")}
 
 @section scripts {
