@@ -58,11 +58,11 @@ namespace EasyNote
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "***gizlilik nedeni ile silindi***",
+                ClientSecret = "***gizlilik nedeni ile silindi***"
+            });
         }
     }
 }

@@ -37,6 +37,8 @@ else
                 success: function (data) {
                     addNote(data);
                     selectFirst();
+                    //seçili olan satırın txt'si direk aktif olarak gelmesini sağlar
+                    $("#title").select();
                 }
             });
         }
